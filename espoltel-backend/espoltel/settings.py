@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2-=7=fg6&po!0266%95992wgu(ttorawr9%6-l_-)jsobju@ro'
+#SECRET_KEY = 'django-insecure-2-=7=fg6&po!0266%95992wgu(ttorawr9%6-l_-)jsobju@ro'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
@@ -100,14 +100,15 @@ WSGI_APPLICATION = 'espoltel.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "espoltel",
-        'USER': "root",
-        'PASSWORD': "localhost",
-        'HOST': "localhost",
-        'PORT': "3306"
-    },
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '3306'),
+    }
 }
 
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
