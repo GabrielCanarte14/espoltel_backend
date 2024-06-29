@@ -6,3 +6,5 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='refresh_token'),
     path('api-auth/', include("rest_framework.urls")),
 ]
+
+
