@@ -54,8 +54,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'espoltel.api',
     'corsheaders',
-    'proyecto',
-    'user',
+    'espoltel.proyecto',
+    'espoltel.user',
 ]
 
 MIDDLEWARE = [
