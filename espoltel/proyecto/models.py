@@ -1,6 +1,6 @@
 from django.db import models
 from datetime import datetime
-from user.models import UserProfile
+from espoltel.user.models import UserProfile
 
 class BudgetItem(models.Model):
     recurso = models.CharField(max_length=100)
