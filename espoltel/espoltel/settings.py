@@ -52,7 +52,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'api',
     'corsheaders',
+    'proyecto',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -88,7 +91,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'espoltel.wsgi.application'
+WSGI_APPLICATION = 'espoltel.espoltel.wsgi.application'
 
 
 # Database
